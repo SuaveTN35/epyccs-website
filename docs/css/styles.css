@@ -356,6 +356,33 @@ img {
   margin-bottom: 15px;
 }
 
+.area-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-light);
+  border-radius: 50%;
+}
+
+.area-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--primary-blue);
+}
+
+.area-link {
+  color: var(--primary-blue);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.area-link:hover {
+  color: var(--accent-orange);
+}
+
 .area-card h3 {
   font-size: 20px;
   margin-bottom: 10px;
@@ -1140,6 +1167,17 @@ img {
   color: var(--text-gray);
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+.logo-img {
+  height: 50px;
+  width: auto;
+}
+
+.footer-logo-img {
+  height: 60px;
+  width: auto;
+  filter: brightness(0) invert(1);
 }
 
 /* Header Container Fix */
