@@ -526,70 +526,70 @@ img {
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 15px;
 }
 
 .testimonial-card {
   background: white;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .testimonial-card .stars {
   color: #fbbf24;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .testimonial-card blockquote {
-  font-size: 14px;
+  font-size: 12px;
   font-style: italic;
   color: var(--text-gray);
-  margin-bottom: 15px;
-  line-height: 1.6;
+  margin-bottom: 10px;
+  line-height: 1.5;
 }
 
 .testimonial-content p {
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: 12px;
+  line-height: 1.5;
   color: var(--text-gray);
   margin: 0;
 }
 
 .quote-icon {
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   fill: var(--border-gray);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .testimonial-author {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  margin-top: 15px;
-  padding-top: 15px;
+  gap: 1px;
+  margin-top: 10px;
+  padding-top: 10px;
   border-top: 1px solid var(--border-gray);
 }
 
 .testimonial-author img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   object-fit: cover;
 }
 
 .testimonial-author strong {
-  font-size: 13px;
+  font-size: 11px;
 }
 
 .testimonial-author span {
-  font-size: 12px;
+  font-size: 10px;
   color: var(--text-gray);
 }
 
 .testimonial-author .location {
-  font-size: 11px;
+  font-size: 10px;
   color: var(--text-light);
 }
 
