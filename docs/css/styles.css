@@ -357,8 +357,8 @@ img {
 }
 
 .area-icon {
-  width: 50px;
-  height: 50px;
+  width: 40px !important;
+  height: 40px !important;
   margin: 0 auto 15px;
   display: flex;
   align-items: center;
@@ -368,8 +368,8 @@ img {
 }
 
 .area-icon svg {
-  width: 24px;
-  height: 24px;
+  width: 20px !important;
+  height: 20px !important;
   stroke: var(--primary-blue);
 }
 
