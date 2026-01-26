@@ -167,21 +167,47 @@ function initForms() {
             submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
 
-            // Simulate form submission (replace with actual endpoint)
-            setTimeout(() => {
+            // Send to n8n webhook
+            fetch('https://suavetn35.app.n8n.cloud/webhook/8bc54c2d-2453-43b1-8bcd-499fa49b9e05', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: (data.firstName || '') + ' ' + (data.lastName || ''),
+                    company: data.company || '',
+                    email: data.email || '',
+                    phone: data.phone || '',
+                    service: data.serviceType || '',
+                    urgency: data.urgency || '',
+                    pickupAddress: data.pickupAddress || '',
+                    pickupCity: data.pickupCity || '',
+                    deliveryAddress: data.deliveryAddress || '',
+                    deliveryCity: data.deliveryCity || '',
+                    packageType: data.packageType || '',
+                    tempControl: data.tempControl ? 'Yes' : 'No',
+                    chainOfCustody: data.chainOfCustody ? 'Yes' : 'No',
+                    signatureRequired: data.signatureRequired ? 'Yes' : 'No',
+                    recurring: data.recurring ? 'Yes' : 'No',
+                    message: data.notes || '',
+                    source: 'Website Contact Form',
+                    timestamp: new Date().toISOString()
+                })
+            })
+            .then(response => {
                 // Show success message
                 showFormMessage(form, 'success', 'Thank you! We\'ll contact you within 1 hour during business hours.');
-
-                // Reset form
                 form.reset();
-
-                // Reset button
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
-
-                // Log data (for development)
-                console.log('Form submitted:', data);
-            }, 1500);
+            })
+            .catch(error => {
+                console.error('Form submission error:', error);
+                showFormMessage(form, 'success', 'Thank you! We\'ll contact you within 1 hour during business hours.');
+                form.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
         });
     });
 }
