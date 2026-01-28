@@ -174,24 +174,19 @@ function initForms() {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    name: (data.firstName || '') + ' ' + (data.lastName || ''),
+                    name: data.name || '',
                     company: data.company || '',
                     email: data.email || '',
                     phone: data.phone || '',
-                    service: data.serviceType || '',
-                    urgency: data.urgency || '',
-                    pickupAddress: data.pickupAddress || '',
-                    pickupCity: data.pickupCity || '',
-                    deliveryAddress: data.deliveryAddress || '',
-                    deliveryCity: data.deliveryCity || '',
-                    packageType: data.packageType || '',
-                    tempControl: data.tempControl ? 'Yes' : 'No',
-                    chainOfCustody: data.chainOfCustody ? 'Yes' : 'No',
-                    signatureRequired: data.signatureRequired ? 'Yes' : 'No',
+                    service: data.service || '',
+                    time: data.time || '',
+                    pickup: data.pickup || '',
+                    delivery: data.delivery || '',
+                    size: data.size || '',
+                    temperature: data.temperature ? 'Yes' : 'No',
                     recurring: data.recurring ? 'Yes' : 'No',
-                    message: data.notes || '',
-                    source: 'Website Contact Form',
-                    timestamp: new Date().toISOString()
+                    instructions: data.instructions || '',
+                    source: 'Website Quote Form'
                 })
             })
             .then(response => {
