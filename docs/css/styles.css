@@ -1,18 +1,18 @@
 /* EPYC Courier Service - Main Stylesheet */
-/* Colors: Blue #1E40AF, Orange #F97316, White #FFFFFF */
+/* Colors: Green #1B8B3D, Purple #8B2B8B, White #FFFFFF */
 
 :root {
-  --primary-blue: #1E40AF;
-  --primary-blue-dark: #1e3a8a;
-  --accent-orange: #F97316;
-  --accent-orange-dark: #ea580c;
+  --primary-blue: #1B8B3D;
+  --primary-blue-dark: #156B2F;
+  --accent-orange: #8B2B8B;
+  --accent-orange-dark: #6B1F6B;
   --text-dark: #1f2937;
   --text-gray: #6b7280;
   --text-light: #9ca3af;
   --bg-light: #f9fafb;
   --bg-white: #ffffff;
   --border-gray: #e5e7eb;
-  --success-green: #10b981;
+  --success-green: #1B8B3D;
 }
 
 * {
@@ -84,13 +84,13 @@ img {
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--primary-blue);
+  display: flex;
+  align-items: center;
 }
 
-.logo span {
-  color: var(--accent-orange);
+.logo-img {
+  height: 50px;
+  width: auto;
 }
 
 .nav-menu {
