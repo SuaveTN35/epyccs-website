@@ -1,0 +1,16 @@
+# OAuth credentials and tokens
+credentials.json
+token.json
+
+# Generated output
+sheet-ids.json
+
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store

@@ -1,0 +1,84 @@
+{
+  "name": "Populate EPYC Content Queue",
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [250, 300],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "1TA_ncP38iAkOQx3MH7zBAkykfisP143Ne7q7P7aA0SU"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Content Queue"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "id": "={{ $json.id }}",
+            "platform": "={{ $json.platform }}",
+            "post_date": "={{ $json.post_date }}",
+            "post_time": "={{ $json.post_time }}",
+            "content": "={{ $json.content }}",
+            "image_url": "={{ $json.image_url }}",
+            "link_url": "={{ $json.link_url }}",
+            "hashtags": "={{ $json.hashtags }}",
+            "status": "={{ $json.status }}",
+            "posted_at": "",
+            "post_id": "",
+            "notes": "={{ $json.notes }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {"id": "id", "displayName": "id", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true},
+            {"id": "platform", "displayName": "platform", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true},
+            {"id": "post_date", "displayName": "post_date", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true},
+            {"id": "post_time", "displayName": "post_time", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true},
+            {"id": "content", "displayName": "content", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true},
+            {"id": "image_url", "displayName": "image_url", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true},
+            {"id": "link_url", "displayName": "link_url", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true},
+            {"id": "hashtags", "displayName": "hashtags", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true},
+            {"id": "status", "displayName": "status", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true},
+            {"id": "posted_at", "displayName": "posted_at", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true},
+            {"id": "post_id", "displayName": "post_id", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true},
+            {"id": "notes", "displayName": "notes", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true}
+          ]
+        },
+        "options": {}
+      },
+      "name": "Add to Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [650, 300],
+      "typeVersion": 4.1
+    },
+    {
+      "parameters": {
+        "jsCode": "return [\n  {id: '1', platform: 'linkedin', post_date: '2026-01-27', post_time: '08:30', content: 'Epyc Courier Service is now on LinkedIn. We\\'re a Los Angeles-based courier company specializing in what matters most: getting your deliveries where they need to be, when they need to be there. Our focus areas: → HIPAA-compliant medical and pharmaceutical delivery → Same-day and rush courier services → B2B logistics with dedicated routes → Last-mile fulfillment for e-commerce. We\\'re locally owned, never subcontract, and maintain a 98.7% on-time delivery rate. If your business depends on reliable deliveries in Los Angeles, let\\'s connect.', image_url: '', link_url: 'https://www.epyccs.com', hashtags: '#LosAngelesBusiness #CourierServices #Logistics #HealthcareLogistics #B2BLogistics #LastMileDelivery', status: 'pending', notes: 'Launch announcement'},\n  {id: '2', platform: 'linkedin', post_date: '2026-01-29', post_time: '08:30', content: '5 signs your business has outgrown DIY delivery: 1. Your team spends hours coordinating pickups and drop-offs 2. \"Where\\'s my package?\" is a daily question 3. Missed deliveries are costing you clients 4. You\\'re paying retail rates for business volume 5. Delivery reliability is unpredictable. A dedicated courier partner eliminates these problems. At Epyc Courier Service, we provide: • Scheduled routes with guaranteed windows • Real-time tracking on every package • SLA-backed performance • Monthly reporting • One point of contact.', image_url: '', link_url: 'https://www.epyccs.com/contact', hashtags: '#OperationsManagement #BusinessLogistics #SupplyChain #LABusiness #Efficiency', status: 'pending', notes: 'B2B Value Proposition'},\n  {id: '3', platform: 'linkedin', post_date: '2026-01-31', post_time: '12:00', content: 'Healthcare logistics require a different standard. When you\\'re transporting medical specimens, pharmaceuticals, or sensitive patient materials, \"close enough\" isn\\'t good enough. What HIPAA-compliant delivery actually means: ✓ Annual HIPAA training for all couriers ✓ Strict chain of custody documentation ✓ Temperature-controlled transport options ✓ PHI protection protocols (45 CFR Part 164) ✓ Immediate delivery confirmation ✓ Dedicated healthcare account specialists.', image_url: '', link_url: 'https://www.epyccs.com/contact', hashtags: '#HealthcareLogistics #HIPAA #MedicalCourier #LosAngelesHealthcare #LabLogistics', status: 'pending', notes: 'Medical/Healthcare Focus'},\n  {id: '4', platform: 'instagram', post_date: '2026-01-27', post_time: '11:00', content: 'We\\'re here. 📍 Epyc Courier Service — Los Angeles\\' trusted delivery partner. What we do: 🏥 Medical & pharmaceutical delivery (HIPAA-compliant) ⚡ Same-day & rush courier 🏢 B2B logistics 📦 Last-mile fulfillment. Locally owned. Never subcontracted. 98.7% on-time. Precision delivery. Every time.', image_url: 'https://epyccs.com/images/launch.jpg', link_url: 'https://www.epyccs.com', hashtags: '#LABusiness #CourierService #LosAngeles #SameDayDelivery #MedicalCourier #LastMile #SmallBusinessLA', status: 'pending', notes: 'Instagram Launch'},\n  {id: '5', platform: 'instagram', post_date: '2026-01-29', post_time: '11:00', content: 'When \"tomorrow\" isn\\'t good enough. ⚡ 2-hour delivery ⚡ 4-hour delivery ⚡ Same-day guaranteed. Legal documents. Medical specimens. Critical parts. Whatever can\\'t wait. We know LA traffic. We know the buildings. We know the shortcuts. Your package. Our priority. 818-217-0070', image_url: 'https://epyccs.com/images/rush.jpg', link_url: '', hashtags: '#SameDayDelivery #RushDelivery #LosAngelesCourier #TimeMatters #LALogistics', status: 'pending', notes: 'Same-Day Highlight'},\n  {id: '6', platform: 'instagram', post_date: '2026-01-31', post_time: '11:00', content: 'Your delivery is never \"just a package\" to us. Every pickup. Every drop-off. Every confirmation. Handled by our team — not random contractors, not gig workers, not mystery drivers. When you call Epyc, you get Epyc. That\\'s the difference.', image_url: 'https://epyccs.com/images/team.jpg', link_url: '', hashtags: '#CourierLife #LADelivery #SmallBusinessLA #ReliableDelivery #BehindTheScenes', status: 'pending', notes: 'Trust/Behind the Scenes'},\n  {id: '7', platform: 'facebook', post_date: '2026-01-27', post_time: '13:00', content: 'Epyc Courier Service is proud to serve the Los Angeles business community! We\\'re a locally owned courier and logistics company specializing in: 🏥 HIPAA-compliant medical delivery ⚡ Same-day and rush service 🏢 B2B scheduled routes 📦 Last-mile e-commerce fulfillment. From Downtown LA to the Valley, from the Westside to the SGV — we\\'ve got Los Angeles covered. Looking for a reliable delivery partner? Give us a call at 818-217-0070 or visit www.epyccs.com', image_url: '', link_url: 'https://www.epyccs.com', hashtags: '#LosAngeles #LABusiness #CourierService #SupportLocal #SmallBusinessLA', status: 'pending', notes: 'Facebook Launch'},\n  {id: '8', platform: 'facebook', post_date: '2026-01-29', post_time: '13:00', content: 'Not all deliveries are created equal. That\\'s why we offer options: ⏰ SAME-DAY & RUSH - When timing is everything. 2-hour, 4-hour, and same-day options available. 🏥 MEDICAL COURIER - HIPAA-compliant delivery for healthcare facilities. 🏢 B2B LOGISTICS - Dedicated routes, guaranteed windows, volume pricing. 📦 LAST-MILE - E-commerce fulfillment with real-time tracking and photo proof of delivery. Whatever you need delivered, we\\'ll get it there. 818-217-0070', image_url: '', link_url: 'https://www.epyccs.com/contact', hashtags: '', status: 'pending', notes: 'Service Overview'},\n  {id: '9', platform: 'facebook', post_date: '2026-01-31', post_time: '13:00', content: 'Here\\'s what you won\\'t get with Epyc Courier Service: ❌ \"Your package is delayed\" with no explanation ❌ Deliveries handed off to random contractors ❌ \"Somewhere between 9am and 6pm\" windows ❌ Unanswered calls and emails. Here\\'s what you will get: ✅ Real-time tracking on every delivery ✅ Guaranteed pickup and delivery windows ✅ Your dedicated account contact ✅ Actual humans answering the phone ✅ 98.7% on-time delivery rate. Reliability shouldn\\'t be a luxury. It\\'s the standard.', image_url: '', link_url: 'https://www.epyccs.com/contact', hashtags: '', status: 'pending', notes: 'Trust/Reliability'}\n];"
+      },
+      "name": "Content Data",
+      "type": "n8n-nodes-base.code",
+      "position": [450, 300],
+      "typeVersion": 2
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [[{"node": "Content Data", "type": "main", "index": 0}]]
+    },
+    "Content Data": {
+      "main": [[{"node": "Add to Google Sheets", "type": "main", "index": 0}]]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
