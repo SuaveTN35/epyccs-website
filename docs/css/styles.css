@@ -406,10 +406,21 @@ img {
 .service-card {
   background: white;
   border-radius: 12px;
-  padding: 35px;
+  padding: 0;
   box-shadow: 0 5px 20px rgba(0,0,0,0.08);
   transition: transform 0.3s, box-shadow 0.3s;
   border-top: 4px solid var(--primary-blue);
+  overflow: hidden;
+}
+
+.service-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-content {
+  padding: 25px;
 }
 
 .service-card:hover {
@@ -423,29 +434,30 @@ img {
   margin-bottom: 20px;
 }
 
-.service-card h3 {
+.service-content h3 {
   font-size: 22px;
   margin-bottom: 15px;
 }
 
-.service-card p {
+.service-content p {
   color: var(--text-gray);
   margin-bottom: 20px;
   font-size: 15px;
 }
 
-.service-card ul {
+.service-content ul {
   list-style: none;
   margin-bottom: 20px;
 }
 
-.service-card li {
+.service-content li {
   padding: 5px 0;
   font-size: 14px;
   color: var(--text-gray);
 }
 
-.service-card li i {
+.service-content li::before {
+  content: "✓";
   color: var(--success-green);
   font-size: 14px;
   margin-right: 8px;
