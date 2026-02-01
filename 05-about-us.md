@@ -112,7 +112,7 @@ Your time matters. Quick dispatch, fast communication, and 24/7 availability for
 | **10,000+** | Deliveries Completed |
 | **99.7%** | On-Time Delivery Rate |
 | **24/7** | Emergency Availability |
-| **15+** | Years Combined Experience |
+| **3+** | Years Combined Experience |
 | **4** | Counties Served |
 | **100%** | Satisfaction Guaranteed |
 

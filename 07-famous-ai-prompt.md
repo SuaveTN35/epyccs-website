@@ -42,7 +42,7 @@ Four service cards:
 - 24/7 Availability
 - Satisfaction Guaranteed
 
-Statistics bar: 10,000+ Deliveries, 99.7% On-Time Rate, 24/7 Service, 15+ Years Experience
+Statistics bar: 10,000+ Deliveries, 99.7% On-Time Rate, 24/7 Service, 3+ Years Experience
 
 Testimonials section with 3 customer quotes
 

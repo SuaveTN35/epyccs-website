@@ -228,7 +228,7 @@ We're not just couriers — we're an extension of your team.
 ## Trusted by Businesses Across Southern California
 
 ### Statistics Bar:
-| 10,000+ | 15+ | 99.7% | 24/7 |
+| 10,000+ | 3+ | 99.7% | 24/7 |
 |---------|-----|-------|------|
 | Deliveries Completed | Years of Experience | On-Time Rate | Availability |
 
